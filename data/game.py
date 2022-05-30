@@ -87,7 +87,28 @@ def scenario_1():
             if event.type == pygame.QUIT:
                 run = False
             if player.value == 21 and player.cardcount == 2:
-                print("BlackJack")
+                if dealer.value < 17 :
+                        while dealer.value < 17:
+                            dealer.deal_card(deck.deal())
+                            dealer.calc_hand() 
+                            dealer.value = dealer.value - dvalue
+                            dvalue = dealer.value
+                            print("Player Hand")
+                            print(player.cards)
+                            print(player.value) 
+                            print("Dealer Hand")
+                            print(dealer.cards)
+                            print(dealer.value)
+                if dealer.value >= 17 :
+                    if dealer.value > 21: 
+                        print ("Blackjack")
+                        run = False
+                    elif player.value > dealer.value:
+                        print("Blackjack")
+                        run = False
+                    elif player.value == dealer.value:
+                        print("Push")
+                        run = False
                 run = False
             elif player.value <= 21:    
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_1:
