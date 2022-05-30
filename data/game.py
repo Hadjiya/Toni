@@ -103,16 +103,17 @@ def scenario_1():
                     print(dealer.value)
                 elif event.type == pygame.KEYDOWN and event.key == pygame.K_2:
                     if dealer.value < 17 :
-                        dealer.deal_card(deck.deal())
-                        dealer.calc_hand() 
-                        dealer.value = dealer.value - dvalue
-                        dvalue = dealer.value
-                        print("Player Hand")
-                        print(player.cards)
-                        print(player.value) 
-                        print("Dealer Hand")
-                        print(dealer.cards)
-                        print(dealer.value)
+                        while dealer.value < 17:
+                            dealer.deal_card(deck.deal())
+                            dealer.calc_hand() 
+                            dealer.value = dealer.value - dvalue
+                            dvalue = dealer.value
+                            print("Player Hand")
+                            print(player.cards)
+                            print(player.value) 
+                            print("Dealer Hand")
+                            print(dealer.cards)
+                            print(dealer.value)
                     if dealer.value >= 17 :
                         if dealer.value > 21: 
                             print ("House Bust")
