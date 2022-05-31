@@ -32,7 +32,7 @@ class Hand(Deck):
 
     def deal_card(self, card):
         self.cards.append(card)
-        self.cardcount + 1
+        self.cardcount += 1
 
 
     def calc_hand(self):
