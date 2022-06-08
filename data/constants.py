@@ -12,3 +12,20 @@ card_images_names = ['AH','2H','3H','4H','5H','6H','7H','8H','9H','10H','JH','QH
 'AD','2D','3D','4D','5D','6D','7D','8D','9D','10D','JD','QD','KD',
 'AS','2S','3S','4S','5S','6S','7S','8S','9S','10S','JS','QS','KS',
 'AC','2C','3C','4C','5C','6C','7C','8C','9C','10C','JC','QC','KC']
+
+
+#2 player mode 
+result_rect = pygame.Rect((200,1400),(0,300))
+
+c_img_rect13 = pygame.Rect((99,44), (330, 610))
+c_img_rect14 = pygame.Rect((99,44), (460, 610))
+c_img_rect15 = pygame.Rect((99,44), (590, 610))
+
+c_img_rect23 = pygame.Rect((99,44), (990, 610))
+c_img_rect24 = pygame.Rect((99,44), (1120, 610))
+c_img_rect25 = pygame.Rect((99,44), (1250, 610))
+
+c_img_rect32 = pygame.Rect((99,44), (600, 10))
+c_img_rect33 = pygame.Rect((99,44), (730, 10))
+c_img_rect34 = pygame.Rect((99,44), (860, 10))
+c_img_rect35 = pygame.Rect((99,44), (990, 10))

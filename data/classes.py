@@ -36,7 +36,7 @@ class Hand(Deck):
     def card_string(self):
         return 'f'
         
-    def calc_hand(self):
+    def calc_handp(self):
 
         ace =[]
         n_ace = []
@@ -82,12 +82,53 @@ class Hand(Deck):
                 self.value += 1
         return self.value
     
-    def display_cards(self):
-        for card in self.cards:
-            cards = "".join((card[0], card[1]))
-            if card not in self.card_img:
-                self.card_img.append(cards)
+    def calc_handd(self):
+
+        ace =[]
+        n_ace = []
+        for i in self.cards:
+            if 'A' not in i:
+                n_ace.append(i)
+            else:
+                ace.append(i)
+
+
+        for card in n_ace:
+            if "K" in card:
+                self.value += 10
+            if "Q" in card:
+                self.value += 10
+            if "J" in card:
+                self.value += 10
+            if "10" in card:
+                self.value += 10  
+            if "9" in card:
+                self.value += 9
+            elif "8" in card:
+                self.value += 8
+            elif "7" in card:
+                self.value += 7
+            elif "6" in card:
+                self.value += 6
+            elif "5" in card:
+                self.value += 5
+            elif "4" in card:
+                self.value += 4
+            elif "3" in card:
+                self.value += 3
+            elif "2" in card:
+                self.value += 2
+            elif "1" in card:
+                self.value += 1
         
+        for card in ace:
+            if self.value <= 10:
+                self.value += 11
+            if self.value +11 >= 17:
+                self.value += 1
+            else:
+                self.value += 1
+        return self.value
                 
 
 class Button():
@@ -110,5 +151,4 @@ class Button():
         return action
 
 
-        
     
