@@ -24,6 +24,8 @@ c_img_rectlist1 = [c_img_rect1, c_img_rect2, c_img_rect3, c_img_rect4, c_img_rec
 
 
 #rectangles for displaying cards wihtout updating the whole screen for 2 player mode
+
+#rect = (height,width),(x,y)
 result_rect = pygame.Rect((200,1400),(0,300))
 
 c_img_rect11 = pygame.Rect((99,44), (70, 610))

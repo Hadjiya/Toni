@@ -17,6 +17,7 @@ mixer.music.load("Menu\RegeanCalyp.mp3")
 mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1)
 
+#V
 #apends text at the end of file
 def winners(text_to_append):
     with open("E:\Python\PyGame\Blackjack\data\winners.txt", "a+") as file_object:
@@ -39,6 +40,7 @@ card_images = {}
 for name in card_images_names:
     filename = 'E:\\Python\\PyGame\\Blackjack\\Sprites\\' + name + '.png'
     card_images[name] = pygame.image.load(filename).convert()
+    
 cardback = pygame.image.load("E:\\Python\\PyGame\\Blackjack\\Sprites\\back.png").convert()
 
 # Main Menu and text
@@ -51,6 +53,11 @@ playern = pygame.image.load("Menu\playern.png").convert()
 # ingame text fonts
 font1 = pygame.font.Font('freesansbold.ttf', 32)
 font2 = pygame.font.Font('freesansbold.ttf', 50)
+
+#game controls
+def game_instruction(value,x,y):
+    value = font1.render(str(value) , True, (0, 0, 0))
+    screen.blit(value,(x,y))
 
 #function for displaying player's names on Window
 def players(x, y, value):
@@ -143,6 +150,8 @@ def scenario_1():
 
         # displays background, score and text
         screen.fill(background_color)
+        game_instruction(" 1 - Hit:",30,350)
+        game_instruction(" 2 - Stand:", 30,400)
         players(264, 550, "Player's Hand")
         show_score(510, 550, player.value)
         players(264, 200, "Dealer's Hand")
@@ -310,6 +319,12 @@ def scenario_2():
 
         # displays background, score and text
         screen.fill(background_color)
+        game_instruction(" Player 1 Controls:",30,50)
+        game_instruction(" 1 - Hit",30,100)
+        game_instruction(" 2 - Stand", 30,150)
+        game_instruction(" Player 2 Controls:",30,230)
+        game_instruction(" up arrow - Hit",30,280)
+        game_instruction(" down arrow - Stand", 30,330)
         players(200, 550, "Player 1's Hand")
         show_score(454, 550, player1.value)
         players(900,550,"Player 2's Hand")

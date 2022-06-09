@@ -7,3 +7,12 @@ PLAYER WINS
 Player 1 and Player 2 Lose
 Player 1 and Player 2 Lose
 Player 1 Wins and Player 2 Bust
+PLAYER BUST
+HOUSE WINS
+House Bust
+HOUSE BUST
+PLAYER BUST
+House Bust
+HOUSE WINS
+PLAYER BUST
+Player 1 Wins and Player 2 Bust
